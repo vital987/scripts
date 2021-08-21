@@ -30,8 +30,10 @@ def save_response_content(response, destination):
                 f.write(chunk)
 
 if __name__ == "__main__":
-    var = raw_input("Please enter public file id : ")
+    var = input("Public File ID : ")
     file_id = str(var)
-    name = raw_input("Please enter name with extension : ")
+    name = input("Filename with Extension : ")
     destination = str(name)
+    print("Downloading...")
     download_file_from_google_drive(file_id, destination)
+    print("File Downloaded.")
